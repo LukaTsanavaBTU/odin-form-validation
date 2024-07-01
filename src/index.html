@@ -12,6 +12,7 @@
         <li>
           <label for="email">Email</label>
           <input name="email" id="email" type="email" required />
+          <span class="validity"></span>
         </li>
         <li>
           <label for="country">Country</label>
@@ -23,6 +24,7 @@
             <option value="australia">Australia</option>
             <option value="japan">Japan</option>
           </select>
+          <span class="validity"></span>
         </li>
         <li>
           <label for="zip">ZIP</label>
@@ -34,6 +36,7 @@
             pattern="\d{5}"
             maxlength="5"
           />
+          <span class="validity"></span>
         </li>
         <li>
           <label for="password">Password</label>
@@ -45,6 +48,7 @@
             minlength="5"
             maxlength="20"
           />
+          <span class="validity"></span>
         </li>
         <li>
           <label for="repeat-password">Repeat Password</label>
@@ -55,18 +59,22 @@
             required
             maxlength="20"
           />
+          <span class="validity"></span>
         </li>
         <li>
-          <input
-            type="checkbox"
-            name="agreement"
-            id="agreement"
-            value="agreed"
-            required
-          />
-          <label for="agreement"
-            >Agree to our <a href="">terms of service</a>?</label
-          >
+          <div>
+            <input
+              type="checkbox"
+              name="agreement"
+              id="agreement"
+              value="agreed"
+              required
+            />
+            <label for="agreement"
+              >Agree to our <a href="">terms of service</a>?</label
+            >
+          </div>
+          <span class="validity"></span>
         </li>
       </ul>
       <button>Confirm</button>
