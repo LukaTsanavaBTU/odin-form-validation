@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Form Validation</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <form novalidate>
+      <h1>Register</h1>
+      <ul>
+        <li>
+          <label for="email">Email</label>
+          <input name="email" id="email" type="email" required />
+          <span class="validity"></span>
+        </li>
+        <li>
+          <label for="country">Country</label>
+          <select name="country" id="country" required>
+            <option value="" selected>Select an Option</option>
+            <option value="georgia">Georgia</option>
+            <option value="norway">Norway</option>
+            <option value="netherlands">Netherlands</option>
+            <option value="australia">Australia</option>
+            <option value="japan">Japan</option>
+          </select>
+          <span class="validity"></span>
+        </li>
+        <li>
+          <label for="zip">ZIP</label>
+          <input
+            name="zip"
+            id="zip"
+            type="tel"
+            required
+            pattern="\d{5}"
+            maxlength="5"
+          />
+          <span class="validity"></span>
+        </li>
+        <li>
+          <label for="password">Password</label>
+          <input
+            name="password"
+            id="password"
+            type="password"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+          <span class="validity"></span>
+        </li>
+        <li>
+          <label for="repeat-password">Repeat Password</label>
+          <input
+            name="repeat-password"
+            id="repeat-password"
+            type="password"
+            required
+            maxlength="20"
+          />
+          <span class="validity"></span>
+        </li>
+        <li>
+          <div>
+            <input
+              type="checkbox"
+              name="agreement"
+              id="agreement"
+              value="agreed"
+              required
+            />
+            <label for="agreement"
+              >Agree to our <a href="">terms of service</a>?</label
+            >
+          </div>
+          <span class="validity"></span>
+        </li>
+      </ul>
+      <button>Confirm</button>
+    </form>
+  </body>
+</html>
