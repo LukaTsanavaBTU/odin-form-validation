@@ -51,9 +51,25 @@ input:not([type="checkbox"]) {
   font-size: 1.5rem;
   height: 20px;
   font-family: var(--sys-font);
-  &:focus{
+  &:focus {
     outline: 2px solid var(--accent-clr);
     border-radius: 2px;
+  }
+}
+
+input[type="checkbox"] {
+  accent-color: var(--accent-clr);
+}
+
+select {
+  height: 35px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 0;
+  font-family: var(--sys-font);
+  font-size: 1.4rem;
+  &:focus {
+    outline: 2px solid var(--accent-clr);
   }
 }
 
